@@ -22,6 +22,10 @@ int main(int argc, char** argv) {
     
     printf("Inserisci %d valori interi POSITIVI\n", SIZE);
     // inserisci il codice necessario all'inserimento dei valori nell'array v
+    for(i=0;i<5;i++)
+    {
+    	scanf("%d",&v[SIZE]);
+	}
     
     mas = massimo(v, SIZE);
     med = media(v, SIZE);
@@ -30,7 +34,7 @@ int main(int argc, char** argv) {
     res = restoDivisione(v[0], v[1]);
     pd = parteDecimaleDivisione(v[0], v[1]);
     
-    printf("\nIl valore massimo è: %d\n", mas);
+    printf("\nIl valore massimo %d\n", mas);
     printf("Il valore medio è: %f\n", med);
     
     printf("\nDivisione tra %d (dividendo) e %d (divisore)\n", v[0], v[1]);
@@ -40,6 +44,7 @@ int main(int argc, char** argv) {
     printf("Resto (intero): %d\n", res);
     
     return (EXIT_SUCCESS);
+    
 }
 
 /*
@@ -47,11 +52,26 @@ int main(int argc, char** argv) {
  */
 int massimo(int valori[], int n) {
     // TODO Implementa il codice della funzione
-    return -1;
+    int i;
+    n=0;
+    for(i=0;i<valori[SIZE];i++)
+    {
+    	if(valori[SIZE]/2==0)
+   	   {  
+    		
+    	if(valori[SIZE]>n)
+    	{
+    		n=valori[SIZE];
+		}
+		
+       }
+	}
+	printf("numero massimo %d",n);
+    return n;
 }
 
-/*
- * Calcola la media dei valori interi POSITIVI nell'array, di dimensione n.
+
+/* Calcola la media dei valori interi POSITIVI nell'array, di dimensione n.
  */
 float media(int valori[], int n) {
     // TODO Implementa il codice della funzione
